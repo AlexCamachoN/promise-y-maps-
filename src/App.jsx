@@ -6,7 +6,7 @@ import {NavBar} from './components/NavBar';
 import {Home} from './pages/Home';
 import { Fragment } from 'react';
 import {ItemListContainer} from './components/ItemListContainer';
-import ItemDetailContainer from './components/ItemDetailContainer';
+import {ItemDetailContainer} from './components/ItemDetailContainer';
 
 function App() {
   return (
