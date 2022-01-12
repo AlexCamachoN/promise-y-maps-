@@ -1,26 +1,26 @@
-export function Item ( { producto } )  {
-    return  (
-      < div  className = "relativo w-80 h-80 bg-gray-100" >
-        <div  className = "absolute flex flex-col items-start" >
-          < div  className = "texto-lg fuente-negrita p-2 bg-gris-900 texto-blanco" >
-            { producto . titulo }
-          </ div >
-          < div  className = "texto-lg fuente-negrita p-2 bg-gris-900 texto-blanco" >
-            { producto . precio }
-          </ div>
-        </ div >
-        < div  className = "recuadro absoluto-0" >
-          < img
-            origen = { producto . pictureUrl }
-            alt = { producto . titulo }
-            className = "h-lleno w-lleno"
+export function Item({ product }) {
+    return (
+      <div className="container relative w-80 h-80 bg-gray-100">
+        <div className="row absolute flex flex-col items-start">
+          <div className="text-lg font-bold p-2 bg-gray-900 text-white">
+            {product.title}
+          </div>
+          <div className="text-lg font-bold p-2 bg-gray-900 text-white">
+            {product.price}
+          </div>
+        </div>
+        <div className="absolute inset-0">
+          <img
+            src={product.pictureUrl}
+            alt={product.title}
+            className="h-full w-full"
           />
-        </ div >
-        <div  className = "absolute bottom-0 right-0 items-start" >
-          <div  className = "text-md fuente-negrita p-2 bg-blanco" >
-             stock: { producto .existencias }
-          </ div>
-        </ div >
-      </ div>
+        </div>
+        <div className="absolute bottom-0 right-0 items-start">
+          <div className="text-md font-bold p-2 bg-white">
+            In Stock: {product.stock}
+          </div>
+        </div>
+      </div>
     )
   }

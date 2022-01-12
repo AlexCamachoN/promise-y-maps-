@@ -1,7 +1,5 @@
-export function Home(){
-    return(
-        <>
-        aqui va el inico de pagina
-        </>
-    )
+import {ItemListContainer} from '../components/ItemListContainer'
+
+export default function HomePage(){
+    return <ItemListContainer/>
 }

@@ -3,13 +3,13 @@ import  {  ItemDetail  }  from  './ItemDetail'
 
 import mockedProducts from '../mock/products.json'
 
- async function getProduct ( id )  {
+ async function getProduct (id)  {
   const  productPromise  =  new  Promise((resolve)  => {
     setTimeout( ( )  =>  {
-      const  product =  mockedProducts .find( (item)  => item.id  ===  id)
+      const  product =  mockedProducts .find((item)  => item.id  ===  id)
       resolve ( product )
     } ,  2000 )
-  } )
+  })
 
   const  product  =  await  productPromise
 
@@ -19,13 +19,13 @@ import mockedProducts from '../mock/products.json'
 export function ItemDetailContainer ( {productId} )  {
   const  [ product ,  setProduct ]  =  useState ( )
 
-  useEffect ( ( )  =>  {
+  useEffect (()  =>  {
    getProduct(productId) .then( ( product )  =>  {
       setProduct(product)
     } )
   } ,  [productId] )
 
-   return product ? < ItemDetail  producto = { product }  /> : null
+   return product ? <ItemDetail  product = { product }/> : null
 }
 
 

@@ -5,13 +5,13 @@ import {ItemList} from './ItemList'
 import mockedProducts from '../mock/products.json'
 
 async function getProducts ( )  {
-    const  productsPromise  =  new  Promise ( ( resolve )  =>  {
-      setTimeout ( ( )  =>  {
-        resolve(mockedProducts )
+    const  productsPromise  =  new Promise ((resolve)  =>  {
+      setTimeout (()  =>  {
+        resolve(mockedProducts)
       } ,  2000 )
     } )
   
-    const  products  =  await productsPromise
+    const  products = await productsPromise
   
     return  products
   }
@@ -25,9 +25,5 @@ export function ItemListContainer(){
         })
     }, [])
 
-    return(
-        
-        <ItemList products= {products} />
-        
-    )
+    return <ItemList products= {products} />
 }
