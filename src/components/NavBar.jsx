@@ -22,10 +22,17 @@ export function NavBar() {
                             <li>
                                 <Link 
                                 className="mx-2"
-                                to="/HomePage">
+                                to="/">
                                     Home
                                 </Link>
-                            </li>      
+                            </li> 
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/Reconocimiento">
+                                    Reconocimientos
+                                </Link>
+                            </li>     
                         </ul>
                     </div>
                      <Link to='/Cart'> 

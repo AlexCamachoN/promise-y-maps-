@@ -1,26 +1,25 @@
 export function Item({ product }) {
     return (
-      <div className="container relative w-80 h-80 bg-gray-100">
-        <div className="row absolute flex flex-col items-start">
-          <div className="text-lg font-bold p-2 bg-gray-900 text-white">
-            {product.title}
+      
+      <div className="container mt-4">
+        <div className="row">
+          <div className=" col-md-4">
+            <div className="card">
+              <div className="card-body">
+                      {product.title}
+                        <hr />
+                        {product.price}
+                        <img
+                          src={product.pictureUrl}
+                          alt={product.title}
+                          className="h-full w-75"
+                        />
+                        <hr />
+                        In Stock: {product.stock}
+              </div>
+            </div>
           </div>
-          <div className="text-lg font-bold p-2 bg-gray-900 text-white">
-            {product.price}
-          </div>
-        </div>
-        <div className="absolute inset-0">
-          <img
-            src={product.pictureUrl}
-            alt={product.title}
-            className="h-full w-full"
-          />
-        </div>
-        <div className="absolute bottom-0 right-0 items-start">
-          <div className="text-md font-bold p-2 bg-white">
-            In Stock: {product.stock}
-          </div>
-        </div>
+        </div>  
       </div>
     )
   }

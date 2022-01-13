@@ -10,6 +10,7 @@ import {ItemDetailContainer} from './components/ItemDetailContainer';
 import HomePage from './pages/Home'
 import CartPage from './pages/cart';
 import ProductDetail from './pages/ProductDetail';
+import Reconocimiento from './pages/Reconocimiento';
 
 function App() {
   return (
@@ -29,6 +30,9 @@ function App() {
                 </Route>
                 <Route path='/Product/:id'>
                   <ProductDetail/>
+                </Route>
+                <Route path='/Reconocimiento'>
+                  <Reconocimiento/>
                 </Route>
             </Switch>
             </div>
