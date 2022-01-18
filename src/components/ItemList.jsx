@@ -1,10 +1,12 @@
 
 import {Item} from './Item'
+import "../styles/ItemList.css"
 
 export function ItemList ({products}) {
   return(
-    <div className='flex mx-auto'>
-      <div className='grid gap-2-cols-2 md:grid-cols-3 grid-rows-3'>
+    <div className="container">
+      <h3 className="title">Lista de productos</h3>
+      <div className='item_list'>
         {products.map((product) => {
           return <Item key={product.id} product={product} />
         })}

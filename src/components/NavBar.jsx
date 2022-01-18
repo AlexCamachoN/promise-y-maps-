@@ -32,7 +32,21 @@ export function NavBar() {
                                 to="/Reconocimiento">
                                     Reconocimientos
                                 </Link>
-                            </li>     
+                            </li> 
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/Exposiciones">
+                                    Exposiciones
+                                </Link>
+                            </li>  
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/Retratos">
+                                    categoria de retratos
+                                </Link>
+                            </li>  
                         </ul>
                     </div>
                      <Link to='/Cart'> 

@@ -1,36 +1,29 @@
 import ProductDetail from "../pages/ProductDetail"
 import { Link } from 'react-router-dom';
+import { Fragment } from "react/cjs/react.development";
+import "../styles/Item.css"
 
 export function Item({ product }) {
     return (
-      
-      <div className="container mt-4">
-        <div className="row">
-          <div className="col-md-4">
-            <div className="card">
-              <div className="card-body">
-                      {product.title}
-                        <hr />
-                        {product.price}
-                       
-                        <img
-                          src={product.pictureUrl}
-                          alt={product.title}
-                          className="h-full w-75"
-                        />
-                       
-                        <hr />
-                        In Stock: {product.stock}
+      <Fragment>              
+        <div className="cards">
+          <div >
+            <img
+              src={product.pictureUrl}
+              alt="imagens"
+              className="w-100"
+            />
+          </div>  
+          <p>Titulo:{product.title}</p>
+          <p>Price:{product.price} </p>                                     
+          <p> In Stock: {product.stock}</p>
 
-                        <button className="btn btn-sm btn-danger mx-2">
+          <button className="btn btn-sm btn-danger mx-2">                       
+          ver detalle                         
+          </button>
                         
-                          ver detalle de obra                          
-                        </button>
-                        
-              </div>
-            </div>
-          </div>
-        </div>  
-      </div>
+            
+        </div>
+      </Fragment>
     )
   }

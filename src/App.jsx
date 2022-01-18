@@ -11,6 +11,8 @@ import HomePage from './pages/Home'
 import CartPage from './pages/cart';
 import ProductDetail from './pages/ProductDetail';
 import Reconocimiento from './pages/Reconocimiento';
+import Exposiciones from './pages/Exposiciones';
+import Retratos from './pages/Retratos';
 
 function App() {
   return (
@@ -33,6 +35,12 @@ function App() {
                 </Route>
                 <Route path='/Reconocimiento'>
                   <Reconocimiento/>
+                </Route>
+                <Route path='/Exposiciones'>
+                  <Exposiciones/>
+                </Route>
+                <Route path='/Retratos'>
+                  <Retratos/>
                 </Route>
             </Switch>
             </div>
