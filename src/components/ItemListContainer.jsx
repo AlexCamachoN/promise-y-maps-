@@ -9,9 +9,7 @@ async function getProducts (Catid)  {
     // const categories = mockedProducts.filter((products)=>{
     //       const result = mockedProducts.filter(mockedProducts=> products.lengh)
     //     }) 
-        
-       
-        
+          
       setTimeout (()  =>  {
         resolve(mockedProducts)
       } ,  2000 )
@@ -26,6 +24,7 @@ export function ItemListContainer(Catid){
     useEffect(()=> {
         getProducts(Catid).then((products) => {
             setProducts(products)
+            console.log(products)
         })
     }, [])
     return <ItemList products= {products} />

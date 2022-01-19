@@ -37,6 +37,7 @@ function App() {
                 <Route path='/p/:productoId'>
                   <ProductDetail/>
                 </Route>
+                
                 <Route path='/Reconocimiento'>
                   <Reconocimiento/>
                 </Route>
@@ -49,9 +50,9 @@ function App() {
             </Switch>
             </div>
       </BrowserRouter>
-      <ItemListContainer/>
+      
       <hr />
-      <ItemDetailContainer/>          
+                
       <FormControl/> 
     </Fragment>
   );

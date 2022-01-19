@@ -5,6 +5,6 @@ export default function HomePage(){
     <div>
         hola home
         
-        
+     <ItemListContainer/>   
     </div>)
 }

@@ -2,6 +2,11 @@ import { useParams } from "react-router-dom"
 import {ItemDetailContainer} from "../components/ItemDetailContainer"
 
 export default function ProductDetail(){
-    const {productId} = useParams
-    return <ItemDetailContainer productId={productId} />
+    const {productoId} = useParams()
+    console.log(productoId)
+    return <div>
+        <p><strong>Detalle de Obras</strong></p>
+        
+        <ItemDetailContainer productoId={productoId} />
+        </div>
 }

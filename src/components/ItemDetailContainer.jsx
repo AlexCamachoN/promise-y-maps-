@@ -4,31 +4,38 @@ import  {  ItemDetail  }  from  './ItemDetail'
 import mockedProducts from '../mock/products.json'
 
  async function getProduct (id)  {
-  const  productPromise  =  new  Promise((resolve)  => {
-    setTimeout( ( )  =>  {
-      const  product =  mockedProducts.find(
-        (item)  => String(item.id)  ===  String(id))
+  console.log(id)
+  // const  productPromise  =  new  Promise((resolve)  => {
+    // setTimeout( ( )  =>  {
+     
+      const  product =  mockedProducts.filter(
+        (item)  => (parseInt(item.id))  ==  (id))
 
-      resolve(product)
-    } ,  2000 )
-  })
+      // resolve(product)
+      
+       console.log(product)
+      return  product
+    // } ,  2000 )
+  // })
 
-  const  product  =  await  productPromise
-
-  return  product
+  // const  product  =  await  productPromise
+  
 }
 
-export function ItemDetailContainer({productId})  {
-  const  [ product , setProduct ]  =  useState ( )
+export function ItemDetailContainer({productoId})  {
+
+  const  [ product , setProduct ]  =  useState()
 
   useEffect (()  =>  {
-   getProduct(productId) .then(( product)  =>  {
-      setProduct(product)
+    console.log(productoId)
+   getProduct(productoId) .then(( product)  =>  {
+     
+      setProduct(product[0])
     } )
 
-  } ,[productId])
+  } ,[productoId])
 
-   return product ? <ItemDetail product ={product}/> : null
+   return (product? <ItemDetail product={product}/> : <div> impirmiendo itemdetail</div>) 
 }
 
 
