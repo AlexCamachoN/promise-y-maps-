@@ -1,6 +1,7 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import {ItemList} from './ItemList'
+import { useParams } from 'react-router-dom'
 
 import mockedProducts from '../mock/products.json'
 
@@ -18,6 +19,8 @@ async function getProducts ( )  {
 
 export function ItemListContainer(){
     const [products, setProducts] = useState([])
+    
+    
 
     useEffect(()=> {
         getProducts().then((products) => {

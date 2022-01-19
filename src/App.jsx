@@ -30,6 +30,9 @@ function App() {
                 <Route path='/Cart'>
                   <CartPage/>
                 </Route>
+                <Route  path="/category/:idCategory">
+                  <HomePage />
+                </Route>
                 <Route path='/Product/:id'>
                   <ProductDetail/>
                 </Route>
