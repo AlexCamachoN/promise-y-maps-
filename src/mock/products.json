@@ -1,5 +1,6 @@
 [{
         "id": 1,
+        "Catid": 1,
         "title": "Abrazo",
         "description": "La pandemia nos separo fisicamente, nos privo del calor humano, aqui una repesentacion del tan ansiado reencuentro.",
         "price": "$80.00",
@@ -8,6 +9,7 @@
     },
     {
         "id": 2,
+        "Catid": 2,
         "title": "Caballo",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
@@ -16,6 +18,7 @@
     },
     {
         "id": 3,
+        "Catid": 3,
         "title": "Campesina",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",
@@ -24,6 +27,7 @@
     },
     {
         "id": 4,
+        "Catid": 4,
         "title": "Desnudo",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
@@ -32,6 +36,7 @@
     },
     {
         "id": 5,
+        "Catid": 5,
         "title": "Erotico",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",
@@ -40,6 +45,7 @@
     },
     {
         "id": 6,
+        "Catid": 6,
         "title": "Frejol",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
@@ -48,6 +54,7 @@
     },
     {
         "id": 7,
+        "Catid": 7,
         "title": "Manzana",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",
@@ -56,6 +63,7 @@
     },
     {
         "id": 8,
+        "Catid": 8,
         "title": "Marine",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
@@ -64,6 +72,7 @@
     },
     {
         "id": 9,
+        "Catid": 9,
         "title": "Mujica",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",

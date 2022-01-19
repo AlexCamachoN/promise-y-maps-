@@ -1,4 +1,5 @@
 
+import { Link } from 'react-router-dom'
 import {Item} from './Item'
 import "../styles/ItemList.css"
 
@@ -8,7 +9,12 @@ export function ItemList ({products}) {
       <h3 className="title">Lista de productos</h3>
       <div className='item_list'>
         {products.map((product) => {
-          return <Item key={product.id} product={product} />
+          return (  
+            //  <Item key={product.id} product={product} />
+            <Link key={product.id} to={`/p/${product}`}>
+              <Item product={product}/>
+            </Link>
+          )
         })}
       </div>
     </div>

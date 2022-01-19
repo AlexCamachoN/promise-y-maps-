@@ -13,6 +13,7 @@ import ProductDetail from './pages/ProductDetail';
 import Reconocimiento from './pages/Reconocimiento';
 import Exposiciones from './pages/Exposiciones';
 import Retratos from './pages/Retratos';
+import Categories from './pages/Categories';
 
 function App() {
   return (
@@ -30,10 +31,10 @@ function App() {
                 <Route path='/Cart'>
                   <CartPage/>
                 </Route>
-                <Route  path="/category/:idCategory">
-                  <HomePage />
+                <Route  path="/Categories/:Catid">
+                  <Categories/>
                 </Route>
-                <Route path='/Product/:id'>
+                <Route path='/p/:productoId'>
                   <ProductDetail/>
                 </Route>
                 <Route path='/Reconocimiento'>

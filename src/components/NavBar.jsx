@@ -44,7 +44,7 @@ export function NavBar() {
                         </ul><div className="collapse navbar-collapse" id="navbarNavDropdown">
                 <ul className="navbar-nav">
                     <li className="nav-item dropdown">
-                        <Link className="nav-link dropdown-toggle" to="/category" id="navbarDropdownMenuLink" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        <Link className="nav-link dropdown-toggle" to="/Categories" >
                             Categorias
                         </Link>
                         <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
