@@ -16,8 +16,8 @@ export function Item({ product }) {
             />           
             </Link>
           </div>  
-          <p>Titulo:{product.title}</p>
-          <p>Price:{product.price} </p>                                     
+          <p><strong>"{product.title}"</strong></p>
+          <p>{product.price} </p>                                     
           <p> In Stock: {product.stock}</p>
 
           <Link  to={`/p/${product.id}`}>

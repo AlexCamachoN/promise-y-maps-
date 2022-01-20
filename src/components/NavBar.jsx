@@ -68,6 +68,13 @@ export function NavBar() {
                                     marina
                                 </Link>
                             </li>
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/categories/retrato">
+                                    retratos
+                                </Link>
+                            </li>
                               
                         </ul><div className="collapse navbar-collapse" id="navbarNavDropdown">
                

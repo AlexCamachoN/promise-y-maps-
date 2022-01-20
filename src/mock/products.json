@@ -4,36 +4,41 @@
         "title": "Abrazo",
         "description": "La pandemia nos separo fisicamente, nos privo del calor humano, aqui una repesentacion del tan ansiado reencuentro.",
         "price": "$80.00",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/abrazo.jpg",
         "categoria": "abstracto",
-        "stock": "Obra Unica"
+        "stock": 5
     },
     {
         "id": 2,
         "Catid": 2,
         "title": "Caballo",
-        "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
+        "description": "Obra trabajada en oleo/lienzo, usando tecnica de monotipia",
         "price": "$249.99",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/caballo1obra.jpg",
         "categoria": "abstracto",
-        "stock": "Obra Unica"
+        "stock": 5
     },
     {
         "id": 3,
         "Catid": 3,
         "title": "Campesina",
-        "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
+        "description": " Obra que representa el contexto de las personas del campo, su trabajo, su lucha por su cultura, por su tierra y su cosecha",
         "price": "$80.00",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/campesinae.jpg",
+        "detalleimagen": "../galeria/campesinae.jpg",
         "categoria": "abstracto",
-        "stock": "Obra Unica"
+        "stock": 5
     },
     {
         "id": 4,
         "Catid": 4,
         "title": "Desnudo",
-        "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
+        "description": "Una de las tantas obras eroticas que se presntan como propuesta traidas del viejo oficio, hace recabar un cambio: dinero por placer",
         "price": "$249.99",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/desnudoproceso.jpg",
         "categoria": "desnudo",
         "stock": 10
@@ -42,8 +47,9 @@
         "id": 5,
         "Catid": 5,
         "title": "Erotico",
-        "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
+        "description": "Una de las tantas obras eroticas que se presntan como propuesta traidas del viejo oficio, hace recabar un cambio: dinero por placer",
         "price": "$80.00",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/erotica.jpg",
         "categoria": "desnudo",
         "stock": 10
@@ -52,8 +58,9 @@
         "id": 6,
         "Catid": 6,
         "title": "Frejol",
-        "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
+        "description": "Pintura trabajada al oleo, tema basada en el campo",
         "price": "$249.99",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/frejol.jpeg",
         "categoria": "paisaje",
         "stock": 10
@@ -62,8 +69,9 @@
         "id": 7,
         "Catid": 7,
         "title": "Manzana",
-        "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
+        "description": "Obra realizada en oleo/lienzo, una representacion del bodegon para una serie de figuras geometricas",
         "price": "$80.00",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/manzanam.jpg",
         "categoria": "abstracto",
         "stock": 10
@@ -72,8 +80,9 @@
         "id": 8,
         "Catid": 8,
         "title": "Marine",
-        "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
+        "description": "Obra oleo/lienzo",
         "price": "$249.99",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/marina1obra.jpg",
         "categoria": "paisaje",
         "stock": 10
@@ -82,11 +91,123 @@
         "id": 9,
         "Catid": 9,
         "title": "Mujica",
-        "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
+        "description": "obra basada en representar el legado de Mujica,",
         "price": "$80.00",
+        "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/mujicam.jpg",
         "categoria": "marina",
         "stock": 10
+    },
+    {
+        "id": 10,
+        "Catid": 10,
+        "title": "marina",
+        "description": "obra oleo/lienzo, formato pequeño",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/barcos.jpg",
+        "categoria": "marina",
+        "stock": 10
+    },
+    {
+        "id": 11,
+        "Catid": 11,
+        "title": "pescador",
+        "description": "obra oleo/lienzo",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/pescador.jpg",
+        "categoria": "marina",
+        "stock": 10
+    },
+    {
+        "id": 12,
+        "Catid": 12,
+        "title": "barco solo",
+        "description": "Obra oleo/lienzo",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/barcosolo.jpg",
+        "categoria": "marina",
+        "stock": 10
+    },
+    {
+        "id": 13,
+        "Catid": 13,
+        "title": "palta",
+        "description": "Propuesta de naturaleza muerta bajo una composicion con planos irregulares",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/palta.jpg",
+        "categoria": "abstracto",
+        "stock": 10
+    },
+    {
+        "id": 14,
+        "Catid": 14,
+        "title": "retrato",
+        "description": "Retrato trabajado en oleo/lienzo",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/retratoseñor.jpg",
+        "categoria": "retrato",
+        "stock": 5
+    },
+    {
+        "id": 15,
+        "Catid": 15,
+        "title": "abstracto",
+        "description": "Obra realizada en oleo/lienzo.",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/abstractotizan.jpg",
+        "categoria": "abstracto",
+        "stock": 10
+    },
+    {
+        "id": 16,
+        "Catid": 16,
+        "title": "Retrato",
+        "description": "Retrato realizado con carboncillo/cartulina profesional.",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/retrato1.jpg",
+        "detalleimagen": "../galeria/detalleretratomujer.jpg",
+        "categoria": "retrato",
+        "stock": 5
+    },
+    {
+        "id": 17,
+        "Catid": 17,
+        "title": "Retrato",
+        "description": "Retrato realizado con carboncillo/cartulina profesional.",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/retrato2.jpg",
+        "categoria": "retrato",
+        "stock": 5
+    },
+    {
+        "id": 18,
+        "Catid": 18,
+        "title": "Retrato",
+        "description": "Retrato realizado con carboncillo/cartulina profesional.",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/retrato3.jpg",
+        "categoria": "retrato",
+        "stock": 5
+    },
+    {
+        "id": 19,
+        "Catid": 19,
+        "title": "Retrato",
+        "description": "Retrato realizado con carboncillo/cartulina profesional.",
+        "price": "$80.00",
+        "medidas": "50 x 50cm",
+        "pictureUrl": "../galeria/retrato4.jpg",
+        "categoria": "retrato",
+        "stock": 5
     }
 
 ]

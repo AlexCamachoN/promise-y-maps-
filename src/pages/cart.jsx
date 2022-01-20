@@ -1,3 +1,14 @@
+import { Fragment } from "react/cjs/react.development";
+import { ItemDetail } from "../components/ItemDetail";
+
 export default function CartPage(){
-    return <div>Cartpage</div>
+    return (
+        <Fragment>
+            <div>
+                Cartpage
+                
+            </div>
+            
+         </Fragment>
+    )
 }

@@ -5,7 +5,7 @@ export default function ProductDetail(){
     const {productoId} = useParams()
     console.log(productoId)
     return <div>
-        <p><strong>Detalle de Obras</strong></p>
+        <p className="text-center"><strong>Detalle de Obras</strong></p>
         
         <ItemDetailContainer productoId={productoId} />
         </div>
