@@ -3,7 +3,7 @@ import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
 
 export function ItemDetail({product}) {
-  console.log(product)
+  // console.log(product)
   return(
     <Fragment>
       <div>
@@ -13,10 +13,10 @@ export function ItemDetail({product}) {
           
         <div >
             
-              <img
+            <img
                 src={product.pictureUrl}
                 alt="imagens"
-                className="w-100"
+                className="w-50 text-center"
               />           
               
         </div> 

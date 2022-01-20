@@ -31,8 +31,8 @@ function App() {
                 <Route path='/Cart'>
                   <CartPage/>
                 </Route>
-                <Route  path="/Categories/:Catid">
-                  <Categories/>
+                <Route  path="/categories/:catid">
+                  <Categories/> 
                 </Route>
                 <Route path='/p/:productoId'>
                   <ProductDetail/>

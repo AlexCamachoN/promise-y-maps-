@@ -4,7 +4,8 @@
         "title": "Abrazo",
         "description": "La pandemia nos separo fisicamente, nos privo del calor humano, aqui una repesentacion del tan ansiado reencuentro.",
         "price": "$80.00",
-        "pictureUrl": "galeria/abrazo.jpg",
+        "pictureUrl": "../galeria/abrazo.jpg",
+        "categoria": "abstracto",
         "stock": "Obra Unica"
     },
     {
@@ -13,7 +14,8 @@
         "title": "Caballo",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
-        "pictureUrl": "galeria/caballo1obra.jpg",
+        "pictureUrl": "../galeria/caballo1obra.jpg",
+        "categoria": "abstracto",
         "stock": "Obra Unica"
     },
     {
@@ -22,7 +24,8 @@
         "title": "Campesina",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",
-        "pictureUrl": "galeria/campesinae.jpg",
+        "pictureUrl": "../galeria/campesinae.jpg",
+        "categoria": "abstracto",
         "stock": "Obra Unica"
     },
     {
@@ -31,7 +34,8 @@
         "title": "Desnudo",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
-        "pictureUrl": "galeria/desnudoproceso.jpg",
+        "pictureUrl": "../galeria/desnudoproceso.jpg",
+        "categoria": "desnudo",
         "stock": 10
     },
     {
@@ -40,7 +44,8 @@
         "title": "Erotico",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",
-        "pictureUrl": "galeria/erotica.jpg",
+        "pictureUrl": "../galeria/erotica.jpg",
+        "categoria": "desnudo",
         "stock": 10
     },
     {
@@ -49,7 +54,8 @@
         "title": "Frejol",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
-        "pictureUrl": "galeria/frejol.jpeg",
+        "pictureUrl": "../galeria/frejol.jpeg",
+        "categoria": "paisaje",
         "stock": 10
     },
     {
@@ -58,7 +64,8 @@
         "title": "Manzana",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",
-        "pictureUrl": "galeria/manzanam.jpg",
+        "pictureUrl": "../galeria/manzanam.jpg",
+        "categoria": "abstracto",
         "stock": 10
     },
     {
@@ -67,7 +74,8 @@
         "title": "Marine",
         "description": "Add a little zing to your winter wardrobe with this vibrant Winter-breaker Jacket. With a brushed fleece inside, and a relaxed unisex fit, this jacket is just the stuff of the dreams, so be quick to grab yourself one!",
         "price": "$249.99",
-        "pictureUrl": "galeria/marina1obra.jpg",
+        "pictureUrl": "../galeria/marina1obra.jpg",
+        "categoria": "paisaje",
         "stock": 10
     },
     {
@@ -76,7 +84,8 @@
         "title": "Mujica",
         "description": "The Next.js beanie has arrived! This embroidered beauty has a snug fit that ensures you're going to feel cozy and warm whatever you're doing.",
         "price": "$80.00",
-        "pictureUrl": "galeria/mujicam.jpg",
+        "pictureUrl": "../galeria/mujicam.jpg",
+        "categoria": "marina",
         "stock": 10
     }
 

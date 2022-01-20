@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import {ItemList} from './ItemList'
-import { useParams } from 'react-router-dom'
 import mockedProducts from '../mock/products.json'
 
 async function getProducts (Catid)  {
@@ -18,14 +17,25 @@ async function getProducts (Catid)  {
     const  products = await productsPromise
     return  products
   }
-export function ItemListContainer(Catid){
+export function ItemListContainer({artes}){
+  console.log(artes)
     const [products, setProducts] = useState([])
 
+
     useEffect(()=> {
-        getProducts(Catid).then((products) => {
-            setProducts(products)
-            console.log(products)
-        })
-    }, [])
+        getProducts(artes).then((products) => {
+            // setProducts(products)
+            const diferencia = products.filter((elemento)=> {
+              if(artes){
+                return elemento.categoria == artes
+              }else{
+                return true
+              }
+              
+              
+            })
+            setProducts(diferencia)
+        })  
+    }, [artes])
     return <ItemList products= {products} />
 }

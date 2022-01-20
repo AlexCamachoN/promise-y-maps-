@@ -1,10 +1,15 @@
 import {ItemListContainer} from "../components/ItemListContainer"
 import { useParams } from "react-router-dom"
+
 export default function Categories(){
-    const {Catid } = useParams();
+    const {catid} = useParams();
+    
+    
+    
+    
     return(
         <div className="container">
-            <ItemListContainer key={Catid} />
+            <ItemListContainer artes={catid} />
         </div>
     )
 }

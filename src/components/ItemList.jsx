@@ -4,14 +4,14 @@ import {Item} from './Item'
 import "../styles/ItemList.css"
 
 export function ItemList ({products}) {
-  console.log(products)
+  // console.log(products)
   return(
     <div className="container">
       <h3 className="title">Lista de productos</h3>
       <div className='item_list'>
 
         {products?.map((product) => {
-          console.log(product)
+          // console.log(product)
           return (  
 
             // <Item key={product.id} product={product} />

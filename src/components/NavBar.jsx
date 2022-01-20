@@ -39,22 +39,40 @@ export function NavBar() {
                                 to="/Exposiciones">
                                     Exposiciones
                                 </Link>
-                            </li>  
+                            </li> 
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/categories/abstracto">
+                                    abstracto
+                                </Link>
+                            </li> 
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/categories/desnudo">
+                                    desnudo
+                                </Link>
+                            </li>
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/categories/paisaje">
+                                    paisaje
+                                </Link>
+                            </li>
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/categories/marina">
+                                    marina
+                                </Link>
+                            </li>
                               
                         </ul><div className="collapse navbar-collapse" id="navbarNavDropdown">
-                <ul className="navbar-nav">
-                    <li className="nav-item dropdown">
-                        <Link className="nav-link dropdown-toggle" to="/Categories" >
-                            Categorias
-                        </Link>
-                        <ul className="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><Link className="dropdown-item" to="/category/1b47567f-8f7b-444b-aae3-b0c634622d10">Retrato</Link></li>
-                            <li><Link className="dropdown-item" to="/category/dbe8757e-9e92-4ed4-b39f-9dfc589691d4">Paisaje</Link></li>
-                            <li><Link className="dropdown-item" to="/category/5fc02f99-4091-4486-a531-98459a3e95e9">bodegon</Link></li>
-                        </ul>
-                    </li>
+               
                     
-                </ul>
+                
                 </div>
                     </div>
                      <Link to='/Cart'> 
