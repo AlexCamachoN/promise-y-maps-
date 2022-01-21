@@ -14,8 +14,16 @@ import Reconocimiento from './pages/Reconocimiento';
 import Exposiciones from './pages/Exposiciones';
 import Retratos from './pages/Retratos';
 import Categories from './pages/Categories';
+import CartContexto from './contexts/CartContext'
+import { ItemDetail } from './components/ItemDetail';
+import CartWidget from './components/CartWidget';
 
 function App() {
+// const contextValue={
+//   isEnabled: true,
+//   toggle: () =>{}
+// }
+
   return (
     <Fragment>
       <BrowserRouter>
@@ -48,6 +56,9 @@ function App() {
                   <Retratos/>
                 </Route>
             </Switch>
+            <CartContexto>
+                <CartPage/>
+            </CartContexto>
             </div>
       </BrowserRouter>
       

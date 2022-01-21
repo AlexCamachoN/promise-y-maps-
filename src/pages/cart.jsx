@@ -1,14 +1,14 @@
-import { Fragment } from "react/cjs/react.development";
+import { useContext } from "react";
+import { Fragment } from "react";
 import { ItemDetail } from "../components/ItemDetail";
+import { CartContexto } from "../contexts/CartContext";
 
 export default function CartPage(){
-    return (
-        <Fragment>
+    // const {nombre} = useContext(CartContexto)
+    return ( 
             <div>
                 Cartpage
-                
+                {/* <p>{nombre}</p>               */}
             </div>
-            
-         </Fragment>
     )
 }
