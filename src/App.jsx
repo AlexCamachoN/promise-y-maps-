@@ -17,6 +17,7 @@ import Categories from './pages/Categories';
 import CartContexto from './contexts/CartContext'
 import { ItemDetail } from './components/ItemDetail';
 import CartWidget from './components/CartWidget';
+import ContextoGeneral from './contexts/CartContext';
 
 function App() {
 // const contextValue={
@@ -27,6 +28,7 @@ function App() {
   return (
     <Fragment>
       <BrowserRouter>
+            <ContextoGeneral>
             <NavBar/>
             <div className='flex flex-col mt-24'>
             <Switch>
@@ -56,10 +58,8 @@ function App() {
                   <Retratos/>
                 </Route>
             </Switch>
-            <CartContexto>
-                <CartPage/>
-            </CartContexto>
             </div>
+            </ContextoGeneral>
       </BrowserRouter>
       
       <hr />

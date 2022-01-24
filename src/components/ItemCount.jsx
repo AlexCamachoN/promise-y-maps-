@@ -7,6 +7,10 @@ export default function ItemCount({stock}){
     const [contador, setContador] = useState(0);
     // <ItemCount stock="5" initial="1" />
 
+    function agregarCarrito (event) {
+        alert(`producto agregado`)
+    }
+
     return(
         <div className="">
             <div className="">
@@ -40,10 +44,9 @@ export default function ItemCount({stock}){
                             - 
                         </button>
                         <Link to={`/cart`}>
-                        <button className="mt-2 btn btn-sm btn-primary"
-                            
+                        <button className="mt-2 btn btn-sm btn-primary" onClick={agregarCarrito}    
                         > 
-                            finalizar compra 
+                            Agregar al carrito
                         </button>
                         </Link>
                     </div>
