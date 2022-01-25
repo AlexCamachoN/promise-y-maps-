@@ -3,6 +3,18 @@ import { Link } from 'react-router-dom';
 import { Fragment } from "react/cjs/react.development";
 import "../styles/Item.css"
 
+export function ItemImage({ product }) {
+  return (
+    <div >
+      <img
+        src={product.pictureUrl}
+        alt={product.title}
+        className=""
+      />
+    </div>
+  )
+}
+
 export function Item({ product }) {
     return (
       <Fragment>              

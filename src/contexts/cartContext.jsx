@@ -10,7 +10,13 @@ export default function ContextoGeneral({children}){
     const onAdd = (producto, cantidad)=> {
         const itemExiste = cart.find(item=>item.id ===producto.id)
         if(!itemExiste){
-            setCart([...cart, {id:producto.id, titulo:producto.titulo, imagen:producto.imagen, precio:producto.precio, cantidad:cantidad, subTotal:(producto.precio*cantidad)}])
+            setCart([...cart, {
+                id:producto.id, 
+                title:producto.title, 
+                pictureUrl:producto.pictureUrl, 
+                price:producto.price, 
+                cantidad:cantidad, 
+                subTotal:(producto.precio*cantidad)}])
             setUnidadesSeleccionadas(unidadesSeleccionadas+1)
             setPrecioTotal(precioTotal+(producto.precio*cantidad))
         }else{

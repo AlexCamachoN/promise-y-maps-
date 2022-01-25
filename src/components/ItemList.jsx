@@ -7,7 +7,7 @@ export function ItemList ({products}) {
   // console.log(products)
   return(
     <div className="container">
-      <h3 className="title">Lista de productos</h3>
+      <h3 className="title">Lista de productos, loading...</h3>
       <div className='item_list'>
 
         {products?.map((product) => {

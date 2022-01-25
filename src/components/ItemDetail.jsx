@@ -1,9 +1,16 @@
-import { Fragment } from 'react'
+import { Fragment, useContext } from 'react'
 import ItemCount from './ItemCount'
 import { Link } from 'react-router-dom'
+import { CartContexto } from '../contexts/CartContext'
+
 
 export function ItemDetail({product}) {
-  // console.log(product)
+  // // console.log(product)
+
+  // // informacion globalizada)
+  const infoGlobal = useContext(CartContexto)
+  console.log(infoGlobal)
+
   return(
     <Fragment>
       <div className='card  mt-2 mx-2 text-center'>
@@ -21,7 +28,7 @@ export function ItemDetail({product}) {
 
            {/* tratando de enrutar con cart */}
           {/* <Link to={`/cart/${product.stock}`}>       */}
-           <ItemCount  stock={product.stock} />
+           <ItemCount  stock={product.stock} product={product} />
           {/* </Link>  */}
 
           <div className=''>
