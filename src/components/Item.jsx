@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom';
 import { Fragment } from "react/cjs/react.development";
 import "../styles/Item.css"
 
-export function ItemImage({ product }) {
+export function ItemImage({ product }) {  
   return (
     <div >
       <img
@@ -14,6 +14,7 @@ export function ItemImage({ product }) {
     </div>
   )
 }
+
 
 export function Item({ product }) {
     return (

@@ -10,12 +10,84 @@ import mockedProducts from '../mock/products.json'
 import ContextoGeneral from "../contexts/CartContext";
 import { useCart } from "../hooks/useCart";
 
+function CartItem({cartItem,}){
+  return(
+    <div>
+      <Link to={`/p/${cartItem.id}`}>
+        <div>
+          <ItemImage product={cartItem}/>
+        </div>
+      </Link>
+      <div>
+        <h2>{cartItem.title} </h2>
+        
+      </div>
+      <div>
+        {cartItem.price.value} {cartItem.price.currecyCode}
+      </div>
+      <div>
+        <span>
+          {cartItem.price.value * cartItem.quantity}{' '}
+          {cartItem.price.currecyCode}
+        </span>{' '}
+        x cantidad {cartItem.quantity}
+      </div>
+    </div>
+  )
+}
 
 export default function CartPage(){
-    const {cart, precioTotal, clearCart} = useContext(CartContexto)
-    const [orderId, setOrderId]= useState(null)
-    const [orderDate, setOrderDate]= useState(null)
+    const {cart, precioTotal, clearCartd} = useContext(CartContexto)
+    // const [orderI, setOrderId]= useState(null)
+    // const [orderDate, setOrderDate]= useState(null)
 
+  console.log(cart)
+
+      const carritoTitle=(
+        <h1>carrito</h1>
+      )
+
+      if(cart.isEmpty){
+      
+      return ( 
+          <Fragment>
+            {carritoTitle}
+            <div>
+              <p>no hay productos en el carrito</p>
+            <Link to="/">
+              {/* <button>seguir comprando</button>   */}
+              <Button>segui en la compra</Button>            
+            </Link>
+            </div>
+      </Fragment>
+    )
+  }
+    return(
+    <Fragment>
+      {carritoTitle}
+          <div>
+            <div>
+              {
+              cart.map(product=>(
+              <p>{product.pictureUrl, product.title, product.price} </p>
+              ))
+              } 
+            {/* {cart.map((cartItem)=>{
+              return(
+                <CartItem
+                key={cartItem.id}
+                />
+              )
+            })} */}
+            </div>
+            <div>
+              <h2>detalle del precio</h2>
+            </div>
+            <p></p>
+          </div>
+    </Fragment>
+  )
+}
 
     // const finishOrder = async() => {
     //     const user = {
@@ -68,14 +140,8 @@ export default function CartPage(){
     //   } else if (cart.length > 0)
     
     // const {nombre} = useContext(CartContexto)
-    console.log(cart)
-    return ( 
-        <Fragment>
-          {
-            cart.map(product=>(
-              <p>{product.pictureUrl, product.title, product.price} </p>
-            ))
-          }
+    
+          
             {/* <div>
                 Cartpage
                 <button>hola</button>
@@ -90,6 +156,6 @@ export default function CartPage(){
             <Button variant="danger" onClick={() => clearCart()}>Vaciar carrito</Button>
             <Button variant="danger" onClick={() => finishOrder()}>Comprar</Button> */}
 
-        </Fragment>
-    )
-}
+  
+
+
