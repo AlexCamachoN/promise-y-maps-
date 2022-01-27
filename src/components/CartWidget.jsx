@@ -11,8 +11,8 @@ export function CartWidget({numOfItems}) {
     
     return (
         <div
-         role="button"
-         className="rounded-md bg-blue-600 font-bold text-2xl text-white px-6 flex items-center justify-center">
+        
+         className="">
              
            
             <a className="navbar-brand" href="#">

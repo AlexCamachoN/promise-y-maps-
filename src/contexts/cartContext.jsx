@@ -2,7 +2,7 @@ import { createContext } from "react";
 import { useState } from "react";
 export const CartContexto = createContext();
 
-export default function ContextoGeneral({children}){
+export function ContextoGeneral({children}){
     const [cart, setCart] = useState([])
     const [unidadesSeleccionadas, setUnidadesSeleccionadas] = useState(0)
     const [precioTotal, setPrecioTotal]= useState(0)
