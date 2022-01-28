@@ -33,7 +33,7 @@ export function ItemDetail({product}) {
 
           <div className=''>
             <p> <strong>titulo:</strong> {product.title}</p>
-            <p> <strong>{product.price}</strong> </p>
+            <p> <strong>{product.price.value}</strong> </p>
             <p><strong>Descripcion:</strong>{product.description}</p>    
             <p> <strong>Medidas:</strong> {product.medidas}</p> 
           </div>

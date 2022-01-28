@@ -23,12 +23,12 @@ function CartItem({cartItem,}){
         
       </div>
       <div>
-        {cartItem.price.value} {cartItem.price.currecyCode}
+        {cartItem.price.value.moneda} {cartItem.price.value.moneda}
       </div>
       <div>
         <span>
           {cartItem.price.value * cartItem.quantity}{' '}
-          {cartItem.price.currecyCode}
+          {cartItem.price}
         </span>{' '}
         x cantidad {cartItem.quantity}
       </div>
@@ -43,15 +43,14 @@ export default function CartPage(){
 
   console.log(cart)
 
-      const carritoTitle=(
-        <h1>carrito</h1>
-      )
+      
 
       if(cart.isEmpty){
       
       return ( 
           <Fragment>
-            {carritoTitle}
+            <h1>carrito</h1>
+            
             <div>
               <p>no hay productos en el carrito</p>
             <Link to="/">
@@ -64,12 +63,17 @@ export default function CartPage(){
   }
     return(
     <Fragment>
-      {carritoTitle}
+      <h1>carrito</h1>     
           <div>
             <div>
               {
               cart.map(product=>(
-              <p>{product.pictureUrl, product.title, product.price} </p>
+              <p> {<img
+                src={product.pictureUrl}
+                alt="imagens"
+                className="w-25 h-25"
+                />} {product.title} {product.price.value}</p>
+              
               ))
               } 
             {/* {cart.map((cartItem)=>{
@@ -82,6 +86,10 @@ export default function CartPage(){
             </div>
             <div>
               <h2>detalle del precio</h2>
+              <Link to="/">
+              <button className="btn btn-sm btn-primary mx-2">finalizar compra</button>
+              </Link>
+              
             </div>
             <p></p>
           </div>

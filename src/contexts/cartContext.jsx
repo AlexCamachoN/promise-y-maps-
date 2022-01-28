@@ -7,7 +7,7 @@ export function ContextoGeneral({children}){
     const [unidadesSeleccionadas, setUnidadesSeleccionadas] = useState(0)
     const [precioTotal, setPrecioTotal]= useState(0)
 
-    const onAdd = (producto, cantidad)=> {
+    const onAdd = (producto, stock)=> {
         const itemExiste = cart.find(item=>item.id ===producto.id)
         if(!itemExiste){
             setCart([...cart, {
@@ -15,27 +15,27 @@ export function ContextoGeneral({children}){
                 title:producto.title, 
                 pictureUrl:producto.pictureUrl, 
                 price:producto.price, 
-                cantidad:cantidad, 
-                subTotal:(producto.precio*cantidad)}])
+                stock:stock, 
+                subTotal:(producto.price*stock)}])
             setUnidadesSeleccionadas(unidadesSeleccionadas+1)
-            setPrecioTotal(precioTotal+(producto.precio*cantidad))
+            setPrecioTotal(precioTotal+(producto.price*stock))
         }else{
             const cartActualizado = cart.map(item =>{
                 if(item.id === producto.id){
-                    item.cantidad +=cantidad
-                    item.subTotal += (producto.precio*cantidad)
+                    item.stock +=stock
+                    item.subTotal += (producto.price*stock)
                 }
                 return item
             })
             setCart(cartActualizado)
-            setPrecioTotal(precioTotal+(producto.precio*cantidad))
+            setPrecioTotal(precioTotal+(producto.price*stock))
         }
     }
 
-    const removeCart=(id, cantidad, precio)=>{
+    const removeCart=(id, stock, price)=>{
         const nuevoCart = cart.filter((item) => item.id !==id)
         setCart (nuevoCart)
-        setPrecioTotal(precioTotal-(cantidad*precio))
+        setPrecioTotal(precioTotal-(stock*price))
         setUnidadesSeleccionadas(unidadesSeleccionadas-1)
     }
 

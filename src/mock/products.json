@@ -3,7 +3,12 @@
         "Catid": 1,
         "title": "Abrazo",
         "description": "La pandemia nos separo fisicamente, nos privo del calor humano, aqui una repesentacion del tan ansiado reencuentro.",
-        "price": "$80.00",
+
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
+
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/abrazo.jpg",
         "categoria": "abstracto",
@@ -14,7 +19,10 @@
         "Catid": 2,
         "title": "Caballo",
         "description": "Obra trabajada en oleo/lienzo, usando tecnica de monotipia",
-        "price": "$249.99",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/caballo1obra.jpg",
         "categoria": "abstracto",
@@ -25,7 +33,10 @@
         "Catid": 3,
         "title": "Campesina",
         "description": " Obra que representa el contexto de las personas del campo, su trabajo, su lucha por su cultura, por su tierra y su cosecha",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/campesinae.jpg",
         "detalleimagen": "../galeria/campesinae.jpg",
@@ -37,7 +48,10 @@
         "Catid": 4,
         "title": "Desnudo",
         "description": "Una de las tantas obras eroticas que se presntan como propuesta traidas del viejo oficio, hace recabar un cambio: dinero por placer",
-        "price": "$249.99",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/desnudoproceso.jpg",
         "categoria": "desnudo",
@@ -48,7 +62,10 @@
         "Catid": 5,
         "title": "Erotico",
         "description": "Una de las tantas obras eroticas que se presntan como propuesta traidas del viejo oficio, hace recabar un cambio: dinero por placer",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/erotica.jpg",
         "categoria": "desnudo",
@@ -59,7 +76,10 @@
         "Catid": 6,
         "title": "Frejol",
         "description": "Pintura trabajada al oleo, tema basada en el campo",
-        "price": "$249.99",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/frejol.jpeg",
         "categoria": "paisaje",
@@ -70,7 +90,10 @@
         "Catid": 7,
         "title": "Manzana",
         "description": "Obra realizada en oleo/lienzo, una representacion del bodegon para una serie de figuras geometricas",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/manzanam.jpg",
         "categoria": "abstracto",
@@ -81,7 +104,10 @@
         "Catid": 8,
         "title": "Marine",
         "description": "Obra oleo/lienzo",
-        "price": "$249.99",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/marina1obra.jpg",
         "categoria": "paisaje",
@@ -92,7 +118,10 @@
         "Catid": 9,
         "title": "Mujica",
         "description": "obra basada en representar el legado de Mujica,",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/mujicam.jpg",
         "categoria": "marina",
@@ -103,7 +132,10 @@
         "Catid": 10,
         "title": "marina",
         "description": "obra oleo/lienzo, formato pequeño",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/barcos.jpg",
         "categoria": "marina",
@@ -114,7 +146,10 @@
         "Catid": 11,
         "title": "pescador",
         "description": "obra oleo/lienzo",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/pescador.jpg",
         "categoria": "marina",
@@ -125,7 +160,10 @@
         "Catid": 12,
         "title": "barco solo",
         "description": "Obra oleo/lienzo",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/barcosolo.jpg",
         "categoria": "marina",
@@ -136,7 +174,10 @@
         "Catid": 13,
         "title": "palta",
         "description": "Propuesta de naturaleza muerta bajo una composicion con planos irregulares",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/palta.jpg",
         "categoria": "abstracto",
@@ -147,7 +188,10 @@
         "Catid": 14,
         "title": "retrato",
         "description": "Retrato trabajado en oleo/lienzo",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/retratoseñor.jpg",
         "categoria": "retrato",
@@ -158,7 +202,10 @@
         "Catid": 15,
         "title": "abstracto",
         "description": "Obra realizada en oleo/lienzo.",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/abstractotizan.jpg",
         "categoria": "abstracto",
@@ -169,7 +216,10 @@
         "Catid": 16,
         "title": "Retrato",
         "description": "Retrato realizado con carboncillo/cartulina profesional.",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/retrato1.jpg",
         "detalleimagen": "../galeria/detalleretratomujer.jpg",
@@ -181,7 +231,10 @@
         "Catid": 17,
         "title": "Retrato",
         "description": "Retrato realizado con carboncillo/cartulina profesional.",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/retrato2.jpg",
         "categoria": "retrato",
@@ -192,7 +245,10 @@
         "Catid": 18,
         "title": "Retrato",
         "description": "Retrato realizado con carboncillo/cartulina profesional.",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/retrato3.jpg",
         "categoria": "retrato",
@@ -203,7 +259,10 @@
         "Catid": 19,
         "title": "Retrato",
         "description": "Retrato realizado con carboncillo/cartulina profesional.",
-        "price": "$80.00",
+        "price": {
+            "value": 100,
+            "moneda": "$"
+        },
         "medidas": "50 x 50cm",
         "pictureUrl": "../galeria/retrato4.jpg",
         "categoria": "retrato",

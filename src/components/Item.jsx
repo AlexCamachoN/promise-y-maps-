@@ -30,7 +30,7 @@ export function Item({ product }) {
             </Link>
           </div>  
           <p><strong>"{product.title}"</strong></p>
-          <p>{product.price} </p>                                     
+          <p>{product.price.value} </p>                                     
           <p> In Stock: {product.stock}</p>
 
           <Link  to={`/p/${product.id}`}>
