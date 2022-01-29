@@ -12,7 +12,7 @@ export default function ItemCount({stock, product}){
 
 
     function agregarCarrito (event) {
-        consContext.onAdd(product, contador)
+        consContext.onAdd(product)
         alert(`producto agregado`)
     }
     console.log(product)

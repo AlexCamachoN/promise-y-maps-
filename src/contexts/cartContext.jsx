@@ -2,19 +2,17 @@ import { createContext } from "react";
 import { useState } from "react";
 export const CartContexto = createContext();
 
-export function ContextoGeneral ({props}){
+export function ContextoGeneral (){
     const [carrito, setCarrito] = useState([])
-    
 
-    const addToCart =(products, total2) =>{
-
+    const addToCart =(products, contador) =>{
 
         if(carrito.some(product=> product.id === products.id)){
             let index = carrito.findIndex(product => product.id === products.id );
             let producto = carrito[index];
             console.log(producto)
-            producto.total2 = producto.total2 + total2;
-            producto.precioTotal = (producto.precioTotal + products.precio.value* total2);
+            producto.contador = producto.contador + contador;
+            producto.precioTotal = (producto.precioTotal + products.precio.value* contador);
             const newProducto = [...carrito];
             newProducto.splice(index, 1, producto);
             
@@ -22,8 +20,8 @@ export function ContextoGeneral ({props}){
             console.log(carrito);
             
         }else{
-            const precioTotal = products.price.value * total2;
-            let producto ={...products, total2, precioTotal}
+            const precioTotal = products.price.value * contador;
+            let producto ={...products, contador, precioTotal}
             setCarrito([...carrito, producto])
             console.log(carrito)
             
@@ -50,14 +48,14 @@ export function ContextoGeneral ({props}){
     }
     const contadorProductos =() =>{
         
-        return carrito.reduce((a,b)=> a + b.total2, 0)
+        return carrito.reduce((a,b)=> a + b.contador, 0)
     }
     
 
     return(
         <CartContexto.Provider value ={{carrito, setCarrito, addToCart, removeItem, clear, TotalCompra, contadorProductos}}>
 
-            {props.children}
+            
         
         </CartContexto.Provider>
     )
