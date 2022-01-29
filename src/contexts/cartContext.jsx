@@ -10,7 +10,7 @@ export function ContextoGeneral({children}){
     const onAdd = (producto, stock)=> {
         const itemExiste = cart.find(item=>item.id ===producto.id)
         if(!itemExiste){
-            setCart.map([...cart, {
+            setCart([...cart, {
                 id:producto.id, 
                 title:producto.title, 
                 pictureUrl:producto.pictureUrl, 
@@ -50,66 +50,6 @@ export function ContextoGeneral({children}){
         </CartContexto.Provider>
     )
 }
-// export function ContextoGeneral (){
-//     const [carrito, setCarrito] = useState([])
 
-//     const addToCart =(products, contador) =>{
-
-//         if(carrito.some(product=> product.id === products.id)){
-//             let index = carrito.findIndex(product => product.id === products.id );
-//             let producto = carrito[index];
-//             console.log(producto)
-//             producto.contador = producto.contador + contador;
-//             producto.precioTotal = (producto.precioTotal + products.precio.value* contador);
-//             const newProducto = [...carrito];
-//             newProducto.splice(index, 1, producto);
-            
-//             setCarrito([...newProducto]);
-//             console.log(carrito);
-            
-//         }else{
-//             const precioTotal = products.price.value * contador;
-//             let producto ={...products, contador, precioTotal}
-//             setCarrito([...carrito, producto])
-//             console.log(carrito)
-            
-           
-//         }
-//     }
-
-//     const removeItem = (id) =>{
-//         let index = carrito.findIndex((product)=> product.id === id);
-//         console.log(index)
-//         const newProducto = [...carrito];
-//         newProducto.splice(index, 1);
-//         setCarrito([...newProducto]);
-
-        
-//     }
-
-//     const clear = () =>{
-//         setCarrito([]);
-//     }
-    
-//     const TotalCompra = () => {
-//         return  carrito.reduce((a,b)=>a + b.precioTotal, 0)
-//     }
-//     const contadorProductos =() =>{
-        
-//         return carrito.reduce((a,b)=> a + b.contador, 0)
-//     }
-    
-
-//     return(
-//         <CartContexto.Provider value ={{carrito, setCarrito, addToCart, removeItem, clear, TotalCompra, contadorProductos}}>
-
-            
-        
-//         </CartContexto.Provider>
-//     )
-    
-// }
-
-// export default ContextoGeneral;
 
 
