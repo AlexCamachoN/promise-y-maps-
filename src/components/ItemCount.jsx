@@ -12,7 +12,7 @@ export default function ItemCount({stock, product}){
 
 
     function agregarCarrito (event) {
-        consContext.onAdd(product)
+        consContext.onAdd(CartContexto)
         alert(`producto agregado`)
     }
     console.log(product)
@@ -64,26 +64,7 @@ export default function ItemCount({stock, product}){
                         </button>
                         </Link>
                     </div>
-                </div>
-                {/* <div className="card mt-2 mx-2 col-4">
-                    <div className="card-body">
-                        <h2>pintura #2</h2>
-                        <h3 className="card-title">
-                            titulo
-                        </h3>
-                        <button className="btn btn-sm btn-warning">
-                            contador: { stock}
-                        </button>
-                        <hr />
-                        <button className="btn btn-sm btn-success"
-                            onClick={() => 
-                            setStock(stock + 1)} 
-                        > 
-                            Agregar al carrito
-                            
-                        </button>
-                    </div> */}
-                {/* </div> */}
+                </div>               
             </div>
         </div>
 

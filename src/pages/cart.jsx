@@ -10,157 +10,154 @@ import mockedProducts from '../mock/products.json'
 import ContextoGeneral from "../contexts/CartContext";
 import { useCart } from "../hooks/useCart";
 
-export default function CartPage() {
+// export default function CartPage() {
     
-  const cartContext = useContext(CartContexto);
-  const {carrito} = cartContext;
+//   const cartContext = useContext(CartContexto);
+//   const {carrito} = cartContext;
   
-  const clear = ()=>{
-      cartContext.clear()
-  }
+//   const clear = ()=>{
+//       cartContext.clear()
+//   }
 
-  if(carrito == ''){
-      return (
-          <Fragment>
-              <h1 className="mt-4">Su carrito esta vacio</h1>
-              <Link to="/">
-              <button className="btn btn-primary mt-4">Ir a Comprar</button>
-              </Link>
-          </Fragment>
+//   if(carrito == ''){
+//       return (
+//           <Fragment>
+//               <h1 className="mt-4">Su carrito esta vacio</h1>
+//               <Link to="/">
+//               <button className="btn btn-primary mt-4">Ir a Comprar</button>
+//               </Link>
+//           </Fragment>
          
-      )
-  }
+//       )
+//   }
 
-  return(
-      <Fragment >
-          <div className="row mt-4 container-fluid">
-          <div className="col-md-8">
-          <h1>Sus Productos</h1>
+//   return(
+//       <Fragment >
+//           <div className="row mt-4 container-fluid">
+//           <div className="col-md-8">
+//           <h1>Sus Productos</h1>
           
-          <div>
+//           <div>
               
-                   <table className="table mt-4" >
-                                        <tbody>
-                                        {carrito.map((product)=>{
-                                          return(
-                                            <tr key={product.id}>
-                                                <td><img src={`../public/${product.pictureUrl}`} className='img-fluid rounded-start' alt=''/></td>
-                                                <td>{product.title}</td>
-                                                <td>cant. {product.contador}</td>
-                                              <td>$ {product.precioTotal}</td>
-                                              <td><button className="btn btn-danger" onClick={()=>{cartContext.removeItem(product.id)}}>X</button></td>
+//                    <table className="table mt-4" >
+//                                         <tbody>
+//                                         {carrito.map((product)=>{
+//                                           return(
+//                                             <tr key={product.id}>
+//                                                 <td><img src={`../public/${product.pictureUrl}`} className='img-fluid rounded-start' alt=''/></td>
+//                                                 <td>{product.title}</td>
+//                                                 <td>cant. {product.contador}</td>
+//                                               <td>$ {product.precioTotal}</td>
+//                                               <td><button className="btn btn-danger" onClick={()=>{cartContext.removeItem(product.id)}}>X</button></td>
                                               
-                                            </tr>
-                                            )})}
-                                        </tbody>
-                                    </table>
+//                                             </tr>
+//                                             )})}
+//                                         </tbody>
+//                                     </table>
                    
 
               
                   
               
-          </div>
-          <button className="btn btn-danger" onClick={clear}>Vaciar carrito</button>
-          </div>
-          <div className="col-md-4">
-                   <h3>Resumen de tu compra</h3>
-                   <p>Total ${cartContext.TotalCompra()}</p>
-                   <button className="btn btn-primary">Finalizar compra</button>
+//           </div>
+//           <button className="btn btn-danger" onClick={clear}>Vaciar carrito</button>
+//           </div>
+//           <div className="col-md-4">
+//                    <h3>Resumen de tu compra</h3>
+//                    <p>Total ${cartContext.TotalCompra()}</p>
+//                    <button className="btn btn-primary">Finalizar compra</button>
                    
                    
-                   </div> 
-                   </div>   
-      </Fragment>
-  );
+//                    </div> 
+//                    </div>   
+//       </Fragment>
+//   );
   
+// }
+
+function CartItem({cartItem,}){
+  return(
+    <div>
+      <Link to={`/p/${cartItem.id}`}>
+        <div>
+          <ItemImage product={cartItem}/>
+        </div>
+      </Link>
+      <div>
+        <h2>{cartItem.title} </h2>
+        
+      </div>
+      <div>
+        {cartItem.price.value.moneda} {cartItem.price.value.moneda}
+      </div>
+      <div>
+        <span>
+          {cartItem.price.value * cartItem.quantity}{' '}
+          {cartItem.price}
+        </span>{' '}
+        x cantidad {cartItem.quantity}
+      </div>
+    </div>
+  )
 }
 
-// function CartItem({cartItem,}){
-//   return(
-//     <div>
-//       <Link to={`/p/${cartItem.id}`}>
-//         <div>
-//           <ItemImage product={cartItem}/>
-//         </div>
-//       </Link>
-//       <div>
-//         <h2>{cartItem.title} </h2>
-        
-//       </div>
-//       <div>
-//         {cartItem.price.value.moneda} {cartItem.price.value.moneda}
-//       </div>
-//       <div>
-//         <span>
-//           {cartItem.price.value * cartItem.quantity}{' '}
-//           {cartItem.price}
-//         </span>{' '}
-//         x cantidad {cartItem.quantity}
-//       </div>
-//     </div>
-//   )
-// }
+export default function CartPage(stock){
+    const {cart, precioTotal, clearCartd} = useContext(CartContexto)
+    // const [orderI, setOrderId]= useState(null)
+    // const [orderDate, setOrderDate]= useState(null)
 
-// export default function CartPage(){
-//     const {cart, precioTotal, clearCartd} = useContext(CartContexto)
-//     // const [orderI, setOrderId]= useState(null)
-//     // const [orderDate, setOrderDate]= useState(null)
-
-//   console.log(cart)
-
+  console.log(cart)
+      if(cart.isEmpty){
       
-
-//       if(cart.isEmpty){
-      
-//       return ( 
-//           <Fragment>
-//             <h1>carrito</h1>
+      return ( 
+          <Fragment>
+            <h1>carrito</h1>
             
-//             <div>
-//               <p>no hay productos en el carrito</p>
-//             <Link to="/">
-//               {/* <button>seguir comprando</button>   */}
-//               <Button>segui en la compra</Button>            
-//             </Link>
-//             </div>
-//       </Fragment>
-//     )
-//   }
-//     return(
-//     <Fragment>
-//       <h1>carrito</h1>     
-//           <div>
-//             <div>
-//               {
-//               cart.map(product=>(
-//               <p> {<img
-//                 src={product.pictureUrl}
-//                 alt="imagens"
-//                 className="w-25 h-25"
-//                 />} {product.title} {product.price.value}</p>
+            <div>
+              <p>no hay productos en el carrito</p>
+            <Link to="/">
+              {/* <button>seguir comprando</button>   */}
+              <Button>segui en la compra</Button>            
+            </Link>
+            </div>
+      </Fragment>
+    )
+  }
+    return(
+    <Fragment>
+      <h1>carrito</h1>     
+          <div>
+            <div>
+              {
+              cart.map(product=>(
+              <p> {<img
+                src={product.pictureUrl}
+                alt="imagens"
+                className="w-25 h-25"
+                />} {product.title} {product.price.value}</p>
               
-//               ))
-//               } 
-//             {/* {cart.map((cartItem)=>{
-//               return(
-//                 <CartItem
-//                 key={cartItem.id}
-//                 />
-//               )
-//             })} */}
-//             </div>
-//             <div>
-//               <h2>detalle del precio</h2>
-//               <Link to="/">
-//               <button className="btn btn-sm btn-primary mx-2">finalizar compra</button>
-//               </Link>
+              ))
+              } 
+            {/* {cart.map((cartItem)=>{
+              return(
+                <CartItem
+                key={cartItem.id}
+                />
+              )
+            })} */}
+            </div>
+            <div>
+              <h2>detalle del precio</h2>
+              <Link to="/">
+              <button className="btn btn-sm btn-primary mx-2">finalizar compra</button>
+              </Link>
               
-//             </div>
-//             <p></p>
-//           </div>
-//     </Fragment>
-//   )
-// }
+            </div>
+            <p></p>
+          </div>
+    </Fragment>
+  )
+}
 //
 
 
