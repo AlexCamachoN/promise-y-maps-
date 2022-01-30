@@ -14,7 +14,10 @@ import { useCart } from "../hooks/useCart";
 
 
 export default function CartPage(stock, products){
-    const {cart, precioTotal, clearCartd} = useContext(CartContexto)
+    const {cart, removeCart} = useContext(CartContexto)
+    
+    // const SoyUnaArrowFunction = (cart) => console.log("cart")
+    // (cart) => console.log('Soy una arrow function anonima, me llamo cart')
 
   console.log(cart)
       if(cart.isEmpty){
@@ -38,12 +41,16 @@ export default function CartPage(stock, products){
             <div>
               {
               cart.map(product=>(
-              <p> {<img
+              <div>
+                <img
                 src={product.pictureUrl}
                 alt="imagens"
                 className="w-25 h-25"
-                />} {product.title} {product.price.value}</p>  
-                           
+                />                 
+                <p>{product.title}</p>
+               <p>{product.price}</p>
+               <button className="btn btn-danger" onClick={()=>removeCart(product.id, product.stock, product.price)}>Eliminar</button>
+              </div>               
               ))
               }
             </div>
@@ -53,7 +60,7 @@ export default function CartPage(stock, products){
               <button className="btn btn-sm btn-primary mx-2">seguir comprando</button>
               </Link>
               <button className="btn btn-sm btn-warning mx-2">finalizar compra</button>
-              <td><button className="btn btn-danger" onClick={()=>{CartContexto.removeItem(products.id)}}>X</button></td>
+              <td><button >X</button></td>
               
             </div>
             <p></p>
