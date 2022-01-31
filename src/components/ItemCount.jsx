@@ -10,7 +10,6 @@ export default function ItemCount({stock, product}){
     const [contador, setContador] = useState(0);
     // <ItemCount stock="5" initial="1" />
 
-
     function agregarCarrito (event) {
         consContext.onAdd(product,contador)
         alert(`producto agregado`)

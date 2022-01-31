@@ -6,29 +6,24 @@ export function ContextoGeneral({children}){
     const [cart, setCart] = useState([])
     const [unidadesSeleccionadas, setUnidadesSeleccionadas] = useState(0)
     const [precioTotal, setPrecioTotal]= useState(0)
-
-    const onAdd = (producto, stock)=> {
-        const itemExiste = cart.find(item=>item.id ===producto.id)
-        if(!itemExiste){
-            setCart([...cart, {
-                id:producto.id, 
-                title:producto.title, 
-                pictureUrl:producto.pictureUrl, 
-                price:producto.price.value, 
-                stock:stock, 
-                subTotal:(producto.price.value*stock)}])
+    function onAdd (producto, contador)  {
+        const itemExiste = cart.find(item => item.id === producto.id)
+        // console.log(itemExiste)
+        if (!itemExiste) {
+            setCart([...cart, {id:producto.id, nombre:producto.title, foto:producto.pictureUrl, precio:producto.price, cantidad:contador, precioTotal:(producto.precio*contador)}])
             setUnidadesSeleccionadas(unidadesSeleccionadas+1)
-            setPrecioTotal(precioTotal+(producto.price.value*stock))
-        }else{
-            const cartActualizado = cart.map(item =>{
-                if(item.id === producto.id){
-                    item.stock +=stock
-                    item.subTotal += (producto.price.value*stock)
+            setPrecioTotal(precioTotal+(producto.price.value*contador))
+        } else {
+            const cartActualizado = cart.map(item => {
+                if (item.id === producto.id) {
+                    item.cantidad += contador
+                    item.precioTotal += (producto.precio.value*contador)
                 }
                 return item
             })
             setCart(cartActualizado)
-            setPrecioTotal(precioTotal+(producto.price.value*stock))
+            console.log(cartActualizado)
+            setPrecioTotal(precioTotal+(producto.precio.value*contador))
         }
     }
 
