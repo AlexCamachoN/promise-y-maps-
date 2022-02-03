@@ -2,21 +2,30 @@ import React from 'react'
 import { useState, useEffect } from 'react'
 import {ItemList} from './ItemList'
 import mockedProducts from '../mock/products.json'
+import {getAllProducts, getProductsByCategoryId} from './firebase'
+
+// function getProducts(artes){
+//   const categoria = artes?.categoria
+//   if(categoria){
+//     return getProductsByCategoryId(categoria)
+//   }else{
+//     return getAllProducts()
+//   }
+// }
 
 async function getProducts (Catid)  {
+
     const  productsPromise  =  new Promise ((resolve)  =>  {
-    // const categories = mockedProducts.filter((products)=>{
-    //       const result = mockedProducts.filter(mockedProducts=> products.lengh)
-    //     }) 
           
-      setTimeout (()  =>  {
-        resolve(mockedProducts)
+       setTimeout (()  =>  {
+         resolve(mockedProducts)
       } ,  2000 )
-    } )
+  } )
   
-    const  products = await productsPromise
-    return  products
-  }
+  const  products = await productsPromise
+   return  products
+}
+
 export function ItemListContainer({artes}){
   console.log(artes)
     const [products, setProducts] = useState([])
