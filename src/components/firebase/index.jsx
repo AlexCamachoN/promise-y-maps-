@@ -1,25 +1,36 @@
-// import { getFirestore } from './conector'
+import { getFirestore } from './conector'
 
-// //funcion reutilitaria 
-// function documentToProduct(document) {
-//     return{
-//         id: document.id,
-//         ...document.data(),
-//     }
-// }
+//funcion reutilitaria 
+function documentToProduct(document) {
+    return{
+        id: document.id,
+        ...document.data(),
+    }
+}
 
-// export async function getAllProducts(){
+export async function getAllProducts(){
 
-//     //se puede llamar tambien como database(db)
-//     const db = getFirestore()
+    //se puede llamar tambien como database(db)
+    const db = getFirestore()
+    console.log("holaaaa")
+   
+    const snapshot = await db.collection('products').get()
+    console.log("hh")
 
-//     const snapshot = await db.collection('products').get()
+    const products = snapshot.docs.map(documentToProduct)
+    console.log(products)
+    return products
+}
 
-//     const products = snapshot.docs.map(documentToProduct)
+export async function getProductById(productId) {
+    const db = getFirestore()
+  const doc = await db.collection('products').doc(productId).get()
+  
+  if (!doc.exists) {
+    return null
+  }
+  
+  return documentToProduct(doc)
+}
 
-//     return products
-// }
-
-// export async function getProductById(productId) {}
-
-// export async function getProductsByCategoryId(categoria){}
+export async function getProductsByCategoryId(categoria){}
