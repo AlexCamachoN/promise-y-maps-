@@ -1,3 +1,4 @@
+import { firestore } from 'firebase'
 import { getFirestore } from './conector'
 
 //funcion reutilitaria 
@@ -33,4 +34,33 @@ export async function getProductById(productId) {
   return documentToProduct(doc)
 }
 
-export async function getProductsByCategoryId(categoria){}
+export async function getProductsByCategoryId(categoria){
+  const db = getFirestore()
+
+  const snapshot = await db
+      .collection('products')
+      .where('categoria', '==', categoria)
+      .get()
+
+  const products = snapshot.docs.map(documentToProduct)
+
+  return products
+}
+
+
+//funcion para crear las ordenes y se dispara en la pagina del carrito,finalizar compra
+export async function createOrder(order){
+  console.log(order)
+  const db = getFirestore()
+
+  const data={
+    buyer: order.buyer,
+    items: order.items,
+    createdAt: firestore.Timestamp.fromDate(new Date()),//fecha de creacion
+    total: order.total,
+  }
+
+  //aqui sucede la magia para realizar el pedido/orden,firebase aqui crea la collection y la inserta a la vez
+  const document = await db.collection('orders').add(data)
+  return document.id
+}

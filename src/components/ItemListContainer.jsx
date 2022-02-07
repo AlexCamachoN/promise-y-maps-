@@ -13,27 +13,10 @@ function getProducts(artes){
   }
 }
 
-// async function getProducts (Catid)  {
-
-//     const  productsPromise  =  new Promise ((resolve)  =>  {
-          
-//        setTimeout (()  =>  {
-//          resolve(mockedProducts)
-//       } ,  2000 )
-//   } )
-  
-//   const  products = await productsPromise
-//    return  products
-// }
 
 export function ItemListContainer({artes}){
   console.log(artes)
     const [products, setProducts] = useState([])
-
-    // useEffect(()=>{
-    //   const Data=getAllProducts()
-    //   console.log(Data)
-    // },[])
 
 
     useEffect(()=> {

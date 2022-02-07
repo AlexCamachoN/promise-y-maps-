@@ -1,24 +1,54 @@
 import { useContext, useState } from "react";
 import { Fragment } from "react";
-import { ItemDetail } from "../components/ItemDetail";
-import { ItemList } from "../components/ItemList";
 import { CartContexto } from "../contexts/CartContext";
+import {useForm} from 'react-hook-form'
 import { Link } from "react-router-dom";
 import Button from "react"
-import { Item, ItemImage } from "../components/Item";
-import mockedProducts from '../mock/products.json'
-import ContextoGeneral from "../contexts/CartContext";
-import { useCart } from "../hooks/useCart";
+// import { firestore } from 'firebase'
+
+import { TextFormulario } from "../components/TextFormulario";
+import { createOrder } from "../components/firebase";
+
 
 export default function CartPage(stock, products){
-    const {cart, removeCart, clearCart, unidadesSeleccionadas, precioTotal} = useContext(CartContexto)
+    const {cart, removeCart, clearCart, unidadesSeleccionadas, precioTotal,} = useContext(CartContexto)
+    console.log(createOrder)
+
+    //se crea form y se trae de la libreria react-hook-form
+    const form =useForm()
+  
+    //funcion para agregar la orden mediante onSubmit
+    async function onSubmit(formValues) {
+      try {
+        
+        console.log(cart)
+        const newOrderData = {
+          buyer: formValues,
+          items: cart,
+          total: precioTotal.toFixed(2),//es para los decimales
+        }
+        
+        const newOrderId = await createOrder(newOrderData)
+      
+        alert(`Gracias por tu compra. OrderID: ${newOrderId}`)
+
+        form.reset()
+
+        clearCart()
+      } catch (error) {
+        alert(`Algo inesperado ha ocurrido.`)
+
+        console.error(error)
+      }
+    }
+
 
     return(
     <Fragment>
       {
         unidadesSeleccionadas > 0?
-        <div>     
-      <h1>carrito</h1>     
+        <div>
+      <h1>carrito</h1>
           <div>
             <div>
             <thead>
@@ -39,7 +69,7 @@ export default function CartPage(stock, products){
                 alt="imagens"
                 className=""
                 style={{width:'80px'}}
-                />                 
+                />
                 <p>Obra:{product.nombre}</p>
                <p>Precio:{product.precio.value}</p>
                <p>cantidad:{product.cantidad} </p>
@@ -48,24 +78,69 @@ export default function CartPage(stock, products){
                <button className="btn btn-sm btn-danger mx-2" onClick={()=>removeCart(product.id,product.cantidad,product.precio)}>Eliminar</button>
               </div>
               <hr />
-              </div>               
+              </div>
+              
               ))
               }
             </div>
-            <div> 
-              <p>precio total: $ {precioTotal}</p>            
-              <Link to="/">
+            <div >
+              <p>precio total: $ {precioTotal}</p>
+              {/* <Link to="/">
               <button className="btn btn-sm btn-primary mx-2">seguir comprando</button>
               </Link>
-              <button className="btn btn-sm btn-warning mx-2" onClick={()=>clearCart()}>Limpiar carrito</button>             
+               */}
+              <div className="card mx-2 mt-4 d-flex">
+              <section>
+                <h2>Completar pedido</h2>
+                <form
+              onSubmit={form.handleSubmit(onSubmit)}
+              className="flex flex-col space-y-4"
+            >
+              <TextFormulario
+                title="Nombre"
+                inputProps={{
+                  placeholder: 'Alex Camacho',
+                  required: true,
+                  ...form.register('nombre'),
+                }}
+              />
+              <TextFormulario
+                title="Correo"
+                inputProps={{
+                  placeholder: 'me@example.com',
+                  required: true,
+                  ...form.register('email'),
+                }}
+              />
+              <TextFormulario
+                title="Telefono"
+                inputProps={{
+                  placeholder: '123456789',
+                  required: true,
+                  ...form.register('phone'),
+                }}
+              />
+              <button className="btn btn-sm btn-warning mx-2" 
+              onClick={()=>onSubmit()}
+              disabled={cart.length === 0}
+              >
+                Finalizar compra
+              </button>
+              
+              </form>
+              </section>
+              </div>
             </div>
-            <p></p>
+            
+           
           </div>
+          
           </div>
+          
           :
           <Fragment>
-            <h1>carrito</h1>           
-            <div className="text-center">         
+            <h1>carrito</h1>
+            <div className="text-center">
               <p>No hay productos en el carrito</p>
               <Link to="/">
               <button className="btn btn-sm btn-primary mx-2">volver a inicio</button>
