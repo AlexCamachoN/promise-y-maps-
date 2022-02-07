@@ -1,8 +1,11 @@
 import React, { useState, useContext} from "react";
 import { Link } from "react-router-dom";
 import { CartContexto } from "../contexts/CartContext";
+import  Swal from   'sweetalert2' 
+import withReactContent from  'sweetalert2-react-content'
 
 export default function ItemCount({stock, product}){
+    const  MySwal  =  withReactContent ( Swal )
     const consContext = useContext(CartContexto)
     console.log(consContext)
 
@@ -12,7 +15,12 @@ export default function ItemCount({stock, product}){
 
     function agregarCarrito (event) {
         consContext.onAdd(product,contador)
-        alert(`producto agregado`)
+        // await MySwal.fire({
+        //     title: <strong>Excelente eleccion</strong>,
+        //     html: <i>{`producto agregado`}</i>,
+        //     icon: 'success'
+        //   })
+        // alert(`producto agregado`)
     }
     console.log(product)
 

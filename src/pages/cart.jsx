@@ -4,6 +4,8 @@ import { CartContexto } from "../contexts/CartContext";
 import {useForm} from 'react-hook-form'
 import { Link } from "react-router-dom";
 import Button from "react"
+import  Swal from   'sweetalert2' 
+import withReactContent from  'sweetalert2-react-content'
 // import { firestore } from 'firebase'
 
 import { TextFormulario } from "../components/TextFormulario";
@@ -11,6 +13,7 @@ import { createOrder } from "../components/firebase";
 
 
 export default function CartPage(stock, products){
+    const  MySwal  =  withReactContent ( Swal )
     const {cart, removeCart, clearCart, unidadesSeleccionadas, precioTotal,} = useContext(CartContexto)
     console.log(createOrder)
 
@@ -29,14 +32,19 @@ export default function CartPage(stock, products){
         }
         
         const newOrderId = await createOrder(newOrderData)
+        await MySwal.fire({
+          title: <strong>Compra realizada!</strong>,
+          html: <i>{`Gracias por realizar tu compra. Tu número de orden de compra es: ${newOrderId}, con el podras hacer el seguimiento a tu pedido`}</i>,
+          icon: 'success'
+        })
       
-        alert(`Gracias por tu compra. OrderID: ${newOrderId}`)
+        // alert(`Gracias por tu compra. OrderID: ${newOrderId} lo vamos a contactar`)
 
         form.reset()
 
         clearCart()
       } catch (error) {
-        alert(`Algo inesperado ha ocurrido.`)
+        // alert(`Algo inesperado ha ocurrido.`)
 
         console.error(error)
       }

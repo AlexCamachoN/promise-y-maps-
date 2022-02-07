@@ -50,7 +50,6 @@ export async function getProductsByCategoryId(categoria){
 
 //funcion para crear las ordenes y se dispara en la pagina del carrito,finalizar compra
 export async function createOrder(order){
-  console.log(order)
   const db = getFirestore()
 
   const data={
