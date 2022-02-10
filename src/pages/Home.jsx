@@ -3,7 +3,7 @@ import {ItemListContainer} from '../components/ItemListContainer'
 export default function HomePage(){
     return (
     <div>
-        hola home
+        {/* hola home */}
         
      <ItemListContainer/>   
     </div>)

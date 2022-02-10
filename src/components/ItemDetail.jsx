@@ -1,6 +1,5 @@
 import { Fragment, useContext } from 'react'
 import ItemCount from './ItemCount'
-import { Link } from 'react-router-dom'
 import { CartContexto } from '../contexts/CartContext'
 
 
@@ -22,14 +21,12 @@ export function ItemDetail({product}) {
           />  
           <img
           src={product.detalleimagen}
-          alt="imagens"
+          // alt="imagens"de esta manera estaba agregando otro imagen como detalle
+          alt={"pintura de " + product.title}
           className="mx-2 w-25 h-25"
           />  
 
-           {/* tratando de enrutar con cart */}
-          {/* <Link to={`/cart/${product.stock}`}>       */}
            <ItemCount  stock={product.stock} product={product} />
-          {/* </Link>  */}
 
           <div className=''>
             <p> <strong>titulo:</strong> {product.title}</p>

@@ -1,7 +1,6 @@
 import React from 'react'
 import { useState, useEffect } from 'react'
 import {ItemList} from './ItemList'
-import mockedProducts from '../mock/products.json'
 import {getAllProducts, getProductsByCategoryId} from './firebase'
 
 function getProducts(artes){

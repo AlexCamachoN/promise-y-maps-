@@ -3,7 +3,6 @@ import { Fragment } from "react";
 import { CartContexto } from "../contexts/CartContext";
 import {useForm} from 'react-hook-form'
 import { Link } from "react-router-dom";
-import Button from "react"
 import  Swal from   'sweetalert2' 
 import withReactContent from  'sweetalert2-react-content'
 // import { firestore } from 'firebase'

@@ -15,12 +15,6 @@ export default function ItemCount({stock, product}){
 
     function agregarCarrito (event) {
         consContext.onAdd(product,contador)
-        // await MySwal.fire({
-        //     title: <strong>Excelente eleccion</strong>,
-        //     html: <i>{`producto agregado`}</i>,
-        //     icon: 'success'
-        //   })
-        // alert(`producto agregado`)
     }
     console.log(product)
 
@@ -29,24 +23,10 @@ export default function ItemCount({stock, product}){
             <div className="">
                 <div className="">
                     <div className="card-body">
-                        <h2>pintura #1</h2>
+                        {/* <h2>pintura #1</h2> */}
                         <hr />
-                        {/* boton de contar suma*/}
-                        <button className="btn btn-sm btn-primary mx-2"
-                            onClick={() =>{
-                            if(contador < stock){
-                              setContador(contador + 1)  
-                            }
-                            }} 
-                        > 
-                            +  
-                        </button>
                         
-                        <button className="btn btn-sm btn-success">
-                            {/* contador empieza en cero y termina en cero  */}
-                            { contador}
-                        </button>
-                            {/* contador para disminuir cantidad  */}
+                           {/* contador para disminuir cantidad  */}
                         <button className="btn btn-sm btn-primary mx-2"
                             onClick={() =>{
                                 if(contador > 0){
@@ -56,6 +36,21 @@ export default function ItemCount({stock, product}){
                             
                         > 
                             - 
+                        </button>
+                        
+                        <button className="btn btn-sm btn-success">
+                            {/* contador empieza en cero y termina en cero  */}
+                            { contador}
+                        </button>
+                        {/* boton de contar suma*/}
+                        <button className="btn btn-sm btn-primary mx-2"
+                            onClick={() =>{
+                            if(contador < stock){
+                              setContador(contador + 1)  
+                            }
+                            }} 
+                        > 
+                            +  
                         </button>
                         {/* <Link to={`/cart`}> */}
                         <button className="mt-2 btn btn-sm btn-primary" onClick={agregarCarrito}    

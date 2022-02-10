@@ -1,9 +1,11 @@
 export default function Reconocimiento (){
     return (
-    <div className="card mt-4 mx-2">
+    <div className="card mt-4 mx-2 text-center">
         <h2 className="text-center">Reconocimientos</h2>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Est, ut recusandae tempore nobis ullam perspiciatis esse consequatur ipsum cum sunt optio accusamus nam numquam eligendi impedit deserunt adipisci eaque excepturi?</p>
-        <i>estoy n cursiva</i>
+        <p>PRIMER PUESTO VII SALON DE PINTORES PIURANOS IPCNA-RG 2013.</p>
+        <p>PRIMERA MENCION HONROSA VII SALON DE PINTORES PIURANOS IPCNA-RG 2012.</p>
+        <p>PARTICIPANTE DEL VII CONCURSO INTERNACIONAL DE PINTURA “MARIO URTEAGA ALVARADO”-CAJAMARCA.</p>
+        <i></i>
     </div>
     )
 }

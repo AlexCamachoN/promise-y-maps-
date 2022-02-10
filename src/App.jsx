@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import {FormControl} from './components/FormControl'
+
 import { BrowserRouter, Route, Switch } from 'react-router-dom';
 import {NavBar} from './components/NavBar';
 import {Home} from './pages/Home';
@@ -61,7 +61,7 @@ function App() {
       </ContextoGeneral>
       <hr />
                 
-      <FormControl/> 
+      
     </Fragment>
   );
 }
