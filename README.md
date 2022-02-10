@@ -16,10 +16,10 @@ https://es.reactjs.org/
 ## Description video
 
 <div align="center" style="height:360px;margin-bottom:40px;">
-  <a href="../galeria/retrato4.jpg">
-    <img src="./imagenes/videoreact.mp4">
+  <a href="https://www.youtube.com/watch?v=b4YRFD1e86Y">
+    <img src="https://www.youtube.com/watch?v=b4YRFD1e86Y">
     <video>
-    <source src="./imagenes/videoreact.mp4" type="video/mp4"/>
+    <source src="https://www.youtube.com/watch?v=b4YRFD1e86Y" type="video/mp4"/>
     </video>
   </a>
   <p><em>Application description video</em></p>
