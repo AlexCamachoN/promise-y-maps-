@@ -2,6 +2,7 @@
 
 <div align="center" style="height:360px;margin-bottom:32px;">
   <a >
+    <img src="./imagenes/logonegro.png">
     <img src="./imagenes/logoblanco.png">
   </a>
   <p><em>logo de galeria</em></p>
