@@ -1,0 +1,19 @@
+{
+  "files": {
+    "main.css": "/static/css/main.326558ef.css",
+    "main.js": "/static/js/main.c0f34918.js",
+    "static/js/787.d7059f3e.chunk.js": "/static/js/787.d7059f3e.chunk.js",
+    "static/media/gradobachillerfrontal.jpeg": "/static/media/gradobachillerfrontal.8efaea9b19ca4570eb0e.jpeg",
+    "static/media/gradobachillerposterior.jpeg": "/static/media/gradobachillerposterior.de8b2200c0b4123d619e.jpeg",
+    "static/media/logoblanco.png": "/static/media/logoblanco.7e49410c9c49788f4423.png",
+    "static/media/logo.svg": "/static/media/logo.6ce24c58023cc2f8fd88fe9d219db6c6.svg",
+    "index.html": "/index.html",
+    "main.326558ef.css.map": "/static/css/main.326558ef.css.map",
+    "main.c0f34918.js.map": "/static/js/main.c0f34918.js.map",
+    "787.d7059f3e.chunk.js.map": "/static/js/787.d7059f3e.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.326558ef.css",
+    "static/js/main.c0f34918.js"
+  ]
+}
