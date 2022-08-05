@@ -30,11 +30,12 @@ export function Item({ product }) {
             </Link>
           </div>  
           <p><strong>"{product.title}"</strong></p>
-          <p>{product.price.value} </p>                                     
-          <p> In Stock: {product.stock}</p>
+          <p> $ {product.price.value} </p>                                     
+          <p > Stock: {product.stock}</p>
+          <p>Codigo: {product.codigo} </p>
 
           <Link  to={`/p/${product.id}`}>
-          <button className="btn btn-sm btn-danger mx-2">                       
+          <button className="btn btn-sm btn-outline-info col-12 mx-auto align-bottom" >                       
           ver detalle                         
           </button>
           </Link>

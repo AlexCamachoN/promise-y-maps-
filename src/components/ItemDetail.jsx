@@ -26,14 +26,15 @@ export function ItemDetail({product}) {
           className="mx-2 w-25 h-25"
           />  
 
-           <ItemCount  stock={product.stock} product={product} />
+          
 
           <div className=''>
-            <p> <strong>titulo:</strong> {product.title}</p>
-            <p> <strong>{product.price.value}</strong> </p>
-            <p><strong>Descripcion:</strong>{product.description}</p>    
+            <p> <strong>Titulo:</strong> {product.title}</p>
+            <p> Precio: $<strong> {product.price.value}</strong> </p>
+            <p><strong>Descripción:</strong>{product.description}</p>    
             <p> <strong>Medidas:</strong> {product.medidas}</p> 
           </div>
+           <ItemCount  stock={product.stock} product={product} />
         </div>                  
       </div>
       

@@ -1,0 +1,126 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    background: #fcfcfc;
+}
+
+.footers {
+    background: #111;
+    width: 100%;
+}
+
+.footers .pie-pagina {
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 50px;
+    padding: 45px 0px;
+}
+
+.footers .pie-pagina .footer {
+    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    text-align: center;
+    justify-content: center;
+    color: #fff;
+}
+
+.siguenos {
+    font-size: 1rem;
+    color: #fff;
+}
+
+.parrafo {
+    color: #fff;
+    text-align: justify;
+}
+
+.pie-pagina .footer img {
+    height: 150px;
+    text-align: center;
+}
+
+.footer p {
+    max-width: 500px;
+    margin: 10 px auto;
+    line-height: 28px;
+    font-size: 14px;
+    color: #fff;
+}
+
+.socials {
+    list-style: none;
+    margin: 1rem 0 3rem 0;
+    margin-top: 25px;
+}
+
+.socials a {
+    text-decoration: none;
+    color: #fff;
+    padding: 0 10px;
+}
+
+.socials a i {
+    font-size: 1.1rem;
+    transition: color .4s ease;
+}
+
+.socials a:hover i {
+    color: aqua;
+}
+
+.navfooter {
+    color: #fff;
+    text-align: left;
+    list-style: none;
+}
+
+.navfooter a {
+    color: #fff;
+    text-decoration: none;
+    transition: color .4s ease;
+}
+
+.navfooter:hover a {
+    color: aqua;
+}
+
+.footer-bottom {
+    background: #000;
+    width: 100vw;
+    padding: 20px 0;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-size: 14 px;
+    word-spacing: 2px;
+    text-transform: capitalize;
+}
+
+.footer-bottom span {
+    text-transform: uppercase;
+    opacity: .4;
+    font-weight: 200;
+}
+
+@media (max-width:580px) {
+    .footers .pie-pagina {
+        display: block;
+        width: 100%;
+        grid-template-columns: repeat(1, 1fr);
+        text-align: center;
+        align-items: center;
+        padding: 0 15px;
+    }
+}

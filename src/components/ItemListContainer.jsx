@@ -14,7 +14,7 @@ function getProducts(artes){
 
 
 export function ItemListContainer({artes}){
-  console.log(artes)
+  // console.log(artes)
     const [products, setProducts] = useState([])
 
 

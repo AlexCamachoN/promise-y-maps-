@@ -18,6 +18,7 @@ import Categories from './pages/Categories';
 import { ItemDetail } from './components/ItemDetail';
 import CartWidget from './components/CartWidget';
 import {ContextoGeneral}  from './contexts/CartContext';
+import { Footer} from './components/Footer';
 
 function App() {
 // const contextValue={
@@ -58,10 +59,9 @@ function App() {
             </div>
             
       </BrowserRouter>
-      </ContextoGeneral>
-      <hr />
-                
-      
+             
+      </ContextoGeneral> 
+      <Footer/>       
     </Fragment>
   );
 }

@@ -7,13 +7,14 @@ import { Link } from 'react-router-dom';
 export function NavBar() {
     return ( 
         <>
-            <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
+            <nav className="navbar navbar-expand-lg navbar-dark bg-info">
                 <div className="container-fluid">
                     <Link to='/'>
                         <a className="navbar-brand" >
                             <img src={logo} width='100'/>
                         </a>
                     </Link>
+                    
                     <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span className="navbar-toggler-icon"></span>
                     </button>
@@ -51,21 +52,21 @@ export function NavBar() {
                                 <Link 
                                 className="mx-2"
                                 to="/categories/desnudo">
-                                    desnudo
+                                    Desnudo
                                 </Link>
                             </li>
                             <li>
                                 <Link 
                                 className="mx-2"
                                 to="/categories/paisaje">
-                                    paisaje
+                                    Paisaje
                                 </Link>
                             </li>
                             <li>
                                 <Link 
                                 className="mx-2"
-                                to="/categories/marina">
-                                    marina
+                                to="/categories/bodegon">
+                                    Bodegón
                                 </Link>
                             </li>
                             <li>
@@ -75,12 +76,16 @@ export function NavBar() {
                                     retratos
                                 </Link>
                             </li>
+                            <li>
+                                <Link 
+                                className="mx-2"
+                                to="/categories/materiales">
+                                    Materiales Artísticos
+                                </Link>
+                            </li>
                               
-                        </ul><div className="collapse navbar-collapse" id="navbarNavDropdown">
-               
-                    
-                
-                </div>
+                        </ul>
+                     
                     </div>
                      <Link to='/Cart'> 
                        <a href="">     

@@ -13,7 +13,7 @@ export async function getAllProducts(){
 
     //se puede llamar tambien como database(db)
     const db = getFirestore()
-    console.log("holaaaa")
+    // console.log("holaaaa")
    
     const snapshot = await db.collection('products').get()
     console.log("hh")

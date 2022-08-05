@@ -10,6 +10,7 @@ export function ItemDetailContainer({productoId})  {
 
   async function getProduct (id)  {
     const data = await getProductById(id)
+    // const data= await mockedProducts(id)
     setProduct(data)
   }
 

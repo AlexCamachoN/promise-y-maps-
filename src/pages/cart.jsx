@@ -14,7 +14,7 @@ import { createOrder } from "../components/firebase";
 export default function CartPage(stock, products){
     const  MySwal  =  withReactContent ( Swal )
     const {cart, removeCart, clearCart, unidadesSeleccionadas, precioTotal,} = useContext(CartContexto)
-    console.log(createOrder)
+    // console.log(createOrder)
 
     //se crea form y se trae de la libreria react-hook-form
     const form =useForm()
